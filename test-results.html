@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kết Quả Unit Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      padding: 40px;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .summary {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .group {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .group h2 {
+      color: #333;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    .test {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    .pass {
+      color: #4CAF50;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    .test-name {
+      color: #333;
+      font-size: 15px;
+    }
+    .time {
+      margin-left: auto;
+      color: #999;
+      font-size: 13px;
+    }
+    .footer {
+      text-align: center;
+      color: #666;
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .prompt-box {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .prompt-title {
+      color: #4CAF50;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧪 Kết Quả Unit Test - Login Module</h1>
+
+  <!-- Prompt AI -->
+  <div class="prompt-box">
+    <div class="prompt-title">🤖 Prompt dùng để sinh test tự động:</div>
+    --Context-- <br>
+    Tôi có file validate.ts với validateEmail và validatePassword<br><br>
+    --Role-- <br>
+    Bạn là Senior QA Engineer<br><br>
+    --Task-- <br>
+    Sinh 9 unit test đầy đủ bằng Vitest<br><br>
+    --Output-- <br>
+    Dùng describe/it/expect, mô tả tiếng Việt
+  </div>
+
+  <!-- Kết quả -->
+  <div class="summary">
+    ✅ 9/9 Tests Passed — Duration: 114ms
+  </div>
+
+  <div class="group">
+    <h2>📧 validateEmail</h2>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Email hợp lệ → trả null</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Email rỗng → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Email thiếu @ → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2>🔐 validatePassword</h2>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Password đủ điều kiện → trả null</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Password &lt; 8 ký tự → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Password thiếu chữ HOA → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Password thiếu chữ thường → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Password thiếu số → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+    <div class="test">
+      <span class="pass">✓</span>
+      <span class="test-name">Password thiếu ký tự đặc biệt → báo lỗi</span>
+      <span class="time">0ms</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>🤖 Unit test được sinh tự động bằng AI (GitHub Copilot)</p>
+    <p>⚡ Tech stack: React + TypeScript + Vitest</p>
+    <p>📁 Source code: 
+      <a href="https://github.com/pttrungthugvnth-netizen/demo-login-test">
+        GitHub Repository
+      </a>
+    </p>
+  </div>
+
+</body>
+</html>
